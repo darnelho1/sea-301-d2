@@ -5,16 +5,34 @@
 /* DONE: Float the main header to the left, to make room for the hamburger menu. */
 .heading-group-h1 {
   float: left;
-  padding: 0 0 .2em 1em;
+  padding: 0 .5em .2em 1em;
+  border-right: solid;
+  border-bottom-right-radius: 10px;
+
 }
 
-/* TODO: Add styles for the icon-menu class. It should be bigger, and off to the right. */
 .icon-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  /*height: 50px;*/
+  /*width: 50px;*/
+  /*border: solid;*/
+  align-self: flex-end;
+  /*margin-top: 16%;*/
+  margin-right: 1%;
+  font-size: 3em;
+
+
 
 }
 
 .main-nav {
   padding: 0.1em;
+  display: flex;
+  flex-direction: column;
+  /*border: solid;*/
+  align-items: flex-end;
 }
 
 .main-nav ul {
@@ -22,10 +40,12 @@
   padding: 0;
   list-style: none;
   clear: both;
+
 }
 
 .main-nav:hover ul {
   display: block;
+  /*border: solid;*/
 }
 
 .main-nav li {
@@ -53,8 +73,23 @@
   text-decoration: none;
 }
 
-/* TODO: Now add styles for how things should look on a larger screen:
-         - Hide the hamburger.
-         - Main should be all on one row, with padding spaced better for a larger screen.
-         - Just, ya know, try to make it look good! */
-/* @media only screen... */
+@media screen and (min-width: 600px) {
+  .icon-menu {
+    display: none;
+  }
+  .main-nav ul {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    list-style: none;
+    clear: both;
+    margin-top: 6%;
+
+  }
+  .main-nav:hover ul {
+    display: flex;
+    flex-direction: row;
+    /*border: solid;*/
+  }
+}
